@@ -1,3 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pokemon {
+  color: orangered;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2% auto;
+}
+
+.img-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-img {
+  height: 30vh;
+  text-align: center;
+}
+
 .footer {
   height: 20vh;
   width: 80vw;
