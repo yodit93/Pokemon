@@ -1,2 +1,1 @@
-const pokdex = document.getElementById('pokedex');
-pokdex.innerHTML = 'Hello World';
+import './styles.css';
