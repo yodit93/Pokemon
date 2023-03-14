@@ -4,6 +4,31 @@
   box-sizing: border-box;
 }
 
-h1 {
-  color: red;
+.pokemon {
+  color: orangered;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2% auto;
+}
+
+.img-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-img {
+  height: 30vh;
+  text-align: center;
+}
+
+.footer {
+  height: 20vh;
+  width: 80vw;
+  text-align: center;
+  border-top: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  margin: 0 auto;
 }
