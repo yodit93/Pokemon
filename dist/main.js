@@ -14,7 +14,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://JavaScript-capstone-group-project/./src/index.js?");
+eval("const pokdex = document.getElementById('pokedex');\npokdex.innerHTML = 'Hello World';\n\n//# sourceURL=webpack://JavaScript-capstone-group-project/./src/index.js?");
 
 /***/ })
 
