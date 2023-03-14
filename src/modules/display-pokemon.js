@@ -1,6 +1,6 @@
 import icon from '../images/heart-regular.svg';
 
-const pokdex = document.getElementById('pokdex');
+const pokdexContainer = document.getElementById('pokdex');
 const displayPokemon = (pokemon) => {
   const pokemonHTMLString = pokemon.map((pokemon) => `<li class="card">
       <img class="card-image" src="${pokemon.image}"/>
@@ -11,7 +11,7 @@ const displayPokemon = (pokemon) => {
       <div class="like-cont"><span class="likes">n likes</span></div>
       <button class="comment-btn">Comments</button>
     </li>`).join(', ');
-  pokdex.innerHTML = pokemonHTMLString;
+  pokdexContainer.innerHTML = pokemonHTMLString;
 };
 
 export default displayPokemon;
