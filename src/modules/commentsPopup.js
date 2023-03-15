@@ -42,6 +42,7 @@ const commentsPopup = (pokemon) => {
   const closeBtn = document.querySelectorAll('.close-btn');
   closeBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
+      popupCont.innerHTML = '';
       popupCont.classList.remove('active');
     });
   });
