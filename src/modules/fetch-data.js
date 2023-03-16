@@ -1,4 +1,5 @@
 import displayPokemon from './display-pokemon.js';
+import { likesCount } from './createId.js';
 
 const fetchData = async () => {
   const urls = Array.from({ length: 12 }, (_, i) => `https://pokeapi.co/api/v2/pokemon/${i + 1}`);
@@ -11,6 +12,7 @@ const fetchData = async () => {
     image: pokemon.sprites.front_default,
   }));
   displayPokemon(pokmone);
+  likesCount();
 };
 
 export default fetchData;
