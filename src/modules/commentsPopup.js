@@ -1,47 +1,4 @@
-/* eslint-disable */
-
-const addCommentChigozie = async (name, comment, id) => {
-  const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ElFTMcXWOO17H2FSqTOD/comments', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      item_id: id,
-      username: name,
-      comment,
-    }),
-  });
-  getComment(id);
-  return res;
-};
-
-const displayComments = async (pokeMonId, data) => {
-  const listUl = document.querySelector(`#body_comment_${pokeMonId}`);
-  let listLi = '';
-  for (let i = 0; i < data.length; i += 1) {
-    listLi += `
-    <li class="comm-list">
-          <p class="user-comm">${data[i].creation_date} ${data[i].username}: ${data[i].comment}</p>
-        </li>`;
-  }
-  listUl.innerHTML = `
-    <p class="comm-header">Comments (${data.length})</p>
-    ${listLi}
-  `;
-};
-
-const getComment = async (men) => {
-  const res = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ElFTMcXWOO17H2FSqTOD/comments?item_id=${men.toString()}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  const data = await res.json();
-  displayComments(men, data);
-  return res;
-};
+import Comment from './comment.js';
 
 const commentsPopup = (pokeMon) => {
   const popupCont = document.querySelector('.popup-cont');
@@ -52,22 +9,21 @@ const commentsPopup = (pokeMon) => {
       <img src="${pokeMon.sprites.front_default}" alt="pokeMon image">
       <button class="close-btn">&times;</button>
     </div>
-    <h2 class="pokeMon-title">${pokeMon.name} ${pokeMon.id}</h2>
-    <div class="pokeMon-body">
+    <h2 class="pokemon-title">${pokeMon.name} ${pokeMon.id}</h2>
+    <div class="pokemon-body">
       <div class="left">
-        <p class="pokeMon-type text">Type: ${pokeMon.types.map((type) => type.type.name).join(', ')}</p>
-        <p class="pokeMon-order text">Order: ${pokeMon.order}</p>
+        <p class="pokemon-type text">Type: ${pokeMon.types.map((type) => type.type.name).join(', ')}</p>
+        <p class="pokemon-order text">Order: ${pokeMon.order}</p>
       </div>
       <div class="right">
-        <p class="pokeMon-height text">Height: ${pokeMon.height}</p>
-        <p class="pokeMon-weight text">Weight: ${pokeMon.weight}</p>
+        <p class="pokemon-height text">Height: ${pokeMon.height}</p>
+        <p class="pokemon-weight text">Weight: ${pokeMon.weight}</p>
       </div>
     </div>
     <div class="comm-cont">
+      <p class="comm-header comment-count">Comment</p>
       <ul class="comm-body" id="body_comment_${pokeMon.id}">
-        <li class="comm-list">
-          <p class="user-comm">date name: comments</p>
-        </li>
+
       </ul>
     </div>
     <div class="comm-form">
@@ -79,7 +35,7 @@ const commentsPopup = (pokeMon) => {
       </form>
     </div>`;
   popupCont.appendChild(popup);
-  getComment(pokeMon.id);
+  Comment.getComment(pokeMon.id);
 
   const submitComment = document.querySelector(`#submit_${pokeMon.id}`);
   submitComment.addEventListener('click', (event) => {
@@ -87,7 +43,7 @@ const commentsPopup = (pokeMon) => {
     const nameInput = document.querySelector(`#name_${pokeMon.id}`);
     const insightsInput = document.querySelector(`#insights_${pokeMon.id}`);
 
-    addCommentChigozie(nameInput.value, insightsInput.value, pokeMon.id);
+    Comment.addCommentChigozie(nameInput.value, insightsInput.value, pokeMon.id);
     nameInput.value = '';
     insightsInput.value = '';
   });
