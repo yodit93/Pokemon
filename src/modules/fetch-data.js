@@ -1,4 +1,5 @@
 import displayPokemon from './display-pokemon.js';
+import { pokemonCounter } from './pokemonCounter.js';
 
 const fetchData = async () => {
   const urls = Array.from({ length: 12 }, (_, i) => `https://pokeapi.co/api/v2/pokemon/${i + 1}`);
@@ -10,6 +11,7 @@ const fetchData = async () => {
     id: pokemon.id,
     image: pokemon.sprites.front_default,
   }));
+  pokemonCounter(pokmone);
   displayPokemon(pokmone);
 };
 
