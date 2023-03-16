@@ -12,7 +12,7 @@ const fetchData = async () => {
     image: pokemon.sprites.front_default,
   }));
   displayPokemon(pokmone);
-  likesCount();
+  // likesCount();
 };
 
 export default fetchData;

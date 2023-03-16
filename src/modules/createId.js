@@ -52,4 +52,4 @@ const addLikes = async (id) => {
   return data;
 };
 
-export { addLikes, likesCount };
+export { addLikes, likesCount, getlikes };
