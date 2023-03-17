@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { pokemonCounter } from './modules/Counter.js';
+import { pokemonCounter } from '../Counter.js';
 
 describe('pokemonCounter', () => {
   test('Should update the pokemon counter', () => {
