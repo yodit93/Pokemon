@@ -21,7 +21,7 @@ const commentsPopup = (pokeMon) => {
       </div>
     </div>
     <div class="comm-cont">
-      <p class="comm-header comment-count">Comment</p>
+      <p class="comm-header comment-count"></p>
       <ul class="comm-body" id="body_comment_${pokeMon.id}">
 
       </ul>
