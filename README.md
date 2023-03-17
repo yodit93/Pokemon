@@ -74,11 +74,6 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Future features
- - Add tasks.
- - Remove tasks
- - Implement ES6 syntaxes and modules
-
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -88,6 +83,11 @@ Clone this repository to your desired folder:
 - GitHub: [yodit93](https://github.com/yodit93)
 - Twitter: [@yodtwit](https://twitter.com/yodtwit)
 - LinkedIn: [Yodit Abebe](linkedin.com/in/yodit-abebe-a97a68140)
+
+
+👤 Emmanuel Obi
+
+- GitHub: [Gmanlove](https://github.com/Gmanlove)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
