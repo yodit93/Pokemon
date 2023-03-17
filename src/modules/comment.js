@@ -1,4 +1,4 @@
-import { commentCounter } from './pokemonCounter.js';
+import { commentCounter } from './Counter.js';
 
 export default class Comment {
   static displayComments = async (pokeMonId, data) => {
