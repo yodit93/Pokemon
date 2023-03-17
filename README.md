@@ -76,7 +76,6 @@ Finally run the app using the following syntax.
 - npm start
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-## 🔭 Watch Video Explanation here <a name="video-demo"></a>
 
 ### Future Features <a name="key-features"></a>
 - Implement some UX improvements: transitions and animations.
@@ -85,6 +84,7 @@ Finally run the app using the following syntax.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+🔭 Watch Video Explanation here <a name="video-demo"></a>
 - **Watch explanation of the features** [here in the video](https://drive.google.com/file/d/1OnJKDYhjLAZ6UCazG69MSS5qAi7C_2rP/view?usp=sharing)
 
 <!-- AUTHORS -->
