@@ -11,8 +11,8 @@ const displayPokemon = (pokemon) => {
         <h2 class="card-title">${pokemon.name} ${pokemon.id}</h2>
         <img id=${pokemon.id} class="heart-img" src="${icon}">
       </div>
-      <div class="like-cont"><span id=likes-${pokemon.id} class="likes"></span>likes</div>
-      <button id="${pokemon.id}" class="comment-btn">Comments</button>
+      <div class="like-cont"><span id=likes-${pokemon.id} class="likes">0</span>likes</div>
+      <div class="comment-btn-cont"><button id="${pokemon.id}" class="comment-btn">Comments</button></div>
     </li>`).join(', ');
   pokdexContainer.innerHTML = pokemonHTMLString;
 

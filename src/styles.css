@@ -113,6 +113,12 @@ body {
   font-weight: bolder;
 }
 
+.comment-btn-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .comment-btn {
   background-color: olivedrab;
   border: 2px solid olivedrab;
@@ -128,7 +134,7 @@ body {
 
 .footer {
   height: 20vh;
-  width: 80vw;
+  width: 100vw;
   border-top: 2px solid black;
   display: flex;
   align-items: center;
