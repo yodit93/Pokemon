@@ -73,6 +73,10 @@ Clone this repository to your desired folder:
 ``git clone `https://github.com/yodit93/JavaScript-capstone-group-project.git`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 🔭 Watch Video Explanation here <a name="video-demo"></a>
+
+
+- **Watch explanation of the features** [here in the video](https://drive.google.com/file/d/1OnJKDYhjLAZ6UCazG69MSS5qAi7C_2rP/view?usp=sharing)
 
 <!-- AUTHORS -->
 
