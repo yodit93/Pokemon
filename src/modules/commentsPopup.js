@@ -5,11 +5,10 @@ const commentsPopup = (pokeMon) => {
   const popup = document.createElement('div');
   popup.classList.add('popup');
   popup.innerHTML = `
-    <div class="popup-header">
-      <img src="${pokeMon.sprites.front_default}" alt="pokeMon image">
-      <button class="close-btn">&times;</button>
-    </div>
-    <h2 class="pokemon-title">${pokeMon.name} ${pokeMon.id}</h2>
+  <h2 class="pokemon-title">${pokeMon.name} ${pokeMon.id}</h2>
+  <button class="close-btn">&times;</button>
+  <div class="popup-header">
+    <img src="${pokeMon.sprites.front_default}" alt="pokeMon image" />
     <div class="pokemon-body">
       <div class="left">
         <p class="pokemon-type text">Type: ${pokeMon.types.map((type) => type.type.name).join(', ')}</p>
@@ -20,20 +19,23 @@ const commentsPopup = (pokeMon) => {
         <p class="pokemon-weight text">Weight: ${pokeMon.weight}</p>
       </div>
     </div>
+  </div>
+  <section class="comment-sec">
     <div class="comm-cont">
       <p class="comm-header comment-count">Comment (0)</p>
       <ul class="comm-body" id="body_comment_${pokeMon.id}">
-
+    
       </ul>
     </div>
     <div class="comm-form">
       <p class="comm-header">Add a comment</p>
       <form action="">
         <input type="text" id="name_${pokeMon.id}" placeholder="Your name" />
-        <textarea name="" id="insights_${pokeMon.id}" cols="30" rows="10" placeholder="Your insights"></textarea>
+        <textarea name="" id="insights_${pokeMon.id}" cols="10" rows="5" placeholder="Your insights"></textarea>
         <button type="submit" class="submit-btn" id="submit_${pokeMon.id}">Comment</button>
       </form>
-    </div>`;
+    </div>
+  </section>`;
   popupCont.appendChild(popup);
   Comment.getComment(pokeMon.id);
 

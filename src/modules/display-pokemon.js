@@ -13,7 +13,7 @@ const displayPokemon = (pokemon) => {
       </div>
       <div class="like-cont"><span id=likes-${pokemon.id} class="likes">0</span>likes</div>
       <div class="comment-btn-cont"><button id="${pokemon.id}" class="comment-btn">Comments</button></div>
-    </li>`).join(', ');
+    </li>`).join('');
   pokdexContainer.innerHTML = pokemonHTMLString;
 
   const commentBtn = document.querySelectorAll('.comment-btn');
